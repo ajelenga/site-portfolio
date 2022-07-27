@@ -37,14 +37,124 @@ nav ul{
     list-style-type: none;
 }
 
-nav ul li{
+nav ul a{
     margin-left: 20px;
     cursor: pointer;
-    border-bottom: 1px white;
+    text-decoration: none;
+    color: black;
+    border-bottom: solid 1px;
+    border-bottom-color: white;
+
 }
 
-nav ul li:hover{
+nav ul a:hover{
+    border-bottom: solid 1px;
+    border-bottom-color: #000000;
+}
+
+.page-content{
+    margin: 4%;
+}
+
+.page-content header{
+    margin-top: 5%;
+    max-width: 75%;
+}
+
+.page-content header h1{
+    margin: 0;
+    font-size: 6vw;
+}
+
+.page-content header p{
+    line-height: 30px;
+    color: #424242;
+}
+
+.page-content header button{
+    border: none;
+    background-color: inherit;
+    outline: none;
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #cccccc;
+    cursor: pointer;
+}
+
+.page-content header button:hover{
+    color: #cccccc;
     border-bottom-color: black;
+}
+
+.page-content .presentation-image{
+    margin-top: 5%;
+}
+
+.page-content .presentation-image img{
+    max-width: 100%;
+    height: auto;
+    transition: filter 0.6s;
+}
+
+.page-content .presentation-image img:hover{
+    filter: brightness(70%);
+}
+
+.page-content .projects-section , .experiences-section {
+    margin-top: 6%;
+}
+
+.page-content .projects-section h1, .experiences-section h1{
+    margin-top: 6%;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.page-content .projects-section .projects, .experiences-section .experiences {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page-content .projects-section .projects .project, .experiences-section .experiences .experience{
+    max-width: 350px;
+    margin-right: 20px;
+}
+
+.page-content .projects-section .projects .project h4, .experiences-section .experiences .experience h4{
+    margin: 0;
+}
+
+.page-content .projects-section .projects .project .description, .experiences-section .experiences .experience .description{
+    font-size: 14px;
+}
+
+.page-content .projects-section .projects .project .date, .experiences-section .experiences .experience .date{
+    font-size: 14px;
+    color: #424242;
+}
+
+footer{
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+footer .colonne p{
+    font-size: 12px;
+    color: gray;
+    cursor: pointer;
+}
+footer .colonne a{
+    text-decoration: none;
+}
+footer .colonne p:hover{
+    color: white;
 }
 
 @media screen and (max-width: 700px) {
@@ -53,5 +163,27 @@ nav ul li:hover{
     }
     nav ul{
         display: none;
+    }
+    .page-content header{
+        margin-top: 10%;
+        max-width: 100%;
+    }
+    .page-content .projects-section,.experiences-section{
+        margin-top: 15%;
+    }
+    .page-content .projects-section h1,.experiences-section h1{
+        font-size: 1.5em;
+    }
+    .page-content .projects-section .projects .project, .experiences-section .experiences .experience {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+    footer{
+        justify-content: flex-start;
+    }
+
+    footer .column {
+        width: 80%;
     }
 }
