@@ -2,6 +2,12 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
+    padding:1%;
+    margin: 0%;
+}
+
+body nav section{
+    font-family: 'Open Sans', sans-serif;
     padding: 0 2%;
     margin: 0;
 }
@@ -42,6 +48,7 @@ nav ul a{
     cursor: pointer;
     text-decoration: none;
     color: black;
+    font-weight: bold;
     border-bottom: solid 1px;
     border-bottom-color: white;
 
@@ -95,11 +102,6 @@ nav ul a:hover{
 .page-content .presentation-image img{
     max-width: 100%;
     height: auto;
-    transition: filter 0.6s;
-}
-
-.page-content .presentation-image img:hover{
-    filter: brightness(70%);
 }
 
 .page-content .projects-section , .experiences-section {
@@ -158,6 +160,7 @@ footer .colonne p:hover{
 }
 
 @media screen and (max-width: 700px) {
+
     nav{
         justify-content: center;
     }
